@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>施都 | Dollyyy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 首页 -->
+    <div id="home" class="page active home-page">
+        <div class="container">
+            <!-- 顶部欢迎区域 -->
+            <div class="top-section">
+                <div class="intro-text">
+                    <h1>你好，我是<span class="highlight">施都</span></h1>
+                    <h2> Dollyyy</h2>
+                    <p class="age">21岁 · 福建厦门</p>
+                    <div class="scroll-indicator">
+                        <span>向下滚动</span>
+                        <div class="chevron"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 个人信息概览 -->
+            <div class="profile-overview">
+                <img src="豆豆眼吉伊.jpg" alt="施都的照片" class="profile-img">
+                <div class="brief-info">
+                    <p>华侨大学 · 智能制造工程</p>
+                    <p>热爱游泳健身 · 喜欢chiikawa</p>
+                    <div class="btn-group">
+                        <button class="btn know-more" onclick="showPage('details')">了解一下</button>
+                        <button class="btn contact-me" onclick="showPage('contact')">联系我</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 底部装饰 -->
+            <div class="footer-decoration">
+                <div class="wave"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 详情页 -->
+    <div id="details" class="page details-page">
+        <div class="container">
+            <header>
+                <span class="back-btn" onclick="showPage('home')">← 返回首页</span>
+                <h1>关于我</h1>
+            </header>
+            
+            <div class="details-content">
+                <!-- 毕业院校 -->
+                <div class="detail-card">
+                    <div class="card-icon school-icon"></div>
+                    <h2>毕业院校</h2>
+                    <p>我毕业于华侨大学，这是一所位于福建的知名高校，学校以鲜明的侨校特色和优秀的教学质量著称。</p>
+                    <img src="微信图片_20251019125425_187_350.jpg" alt="华侨大学校园" class="detail-img">
+                </div>
+                
+                <!-- 所在城市 -->
+                <div class="detail-card">
+                    <div class="card-icon city-icon"></div>
+                    <h2>所在城市</h2>
+                    <p>我目前居住在福建厦门，这是一座美丽的海滨城市，有着"海上花园"的美誉。喜欢这里的气候和环境，闲暇时会去海边散步，感受海风带来的惬意。</p>
+                    <img src="微信图片_20251019124810_183_350.jpg" alt="厦门风光" class="detail-img">
+                </div>
+                
+                <!-- 专业 -->
+                <div class="detail-card">
+                    <div class="card-icon major-icon"></div>
+                    <h2>专业</h2>
+                    <p>我的专业是智能制造工程，这是一个融合机械工程、电子技术、计算机科学和自动化控制的交叉学科。我对智能装备、自动化生产线和工业机器人等领域有着浓厚的兴趣。</p>
+    
+                </div>
+                
+                <!-- 爱好 -->
+                <div class="detail-card">
+                    <div class="card-icon hobby-icon"></div>
+                    <h2>爱好</h2>
+                    <p>我喜欢游泳和健身，保持运动让我拥有健康的身体和积极的心态。另外，我非常喜欢卡通人物chiikawa，它可爱的形象总能给我带来好心情。</p>
+                    <img src="微信图片_20251019125219_186_350.jpg" alt="chiikawa" class="detail-img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 联系页 -->
+    <div id="contact" class="page contact-page">
+        <div class="container">
+            <header>
+                <span class="back-btn" onclick="showPage('home')">← 返回首页</span>
+                <h1>联系我</h1>
+            </header>
+            
+            <div class="contact-card">
+                <img src="微信图片_20251019124809_182_350.jpg" alt="施都" class="contact-img">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-label">电话</span>
+                        <span class="contact-value">15338810927</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">邮箱</span>
+                        <span class="contact-value">3220747212@qq.com</span>
+                    </div>
+                    <p class="contact-note">欢迎随时联系我，我会尽快回复~</p>
+                </div>
+            </div>
+            
+            <div class="contact-decoration">
+                <div class="dot-pattern"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 页面切换功能
+        function showPage(pageId) {
+            // 隐藏所有页面
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            // 显示目标页面
+            document.getElementById(pageId).classList.add('active');
+            // 滚动到顶部
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
